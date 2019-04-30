@@ -44,7 +44,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(237, 13);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 17);
+            this.label1.Size = new System.Drawing.Size(77, 18);
             this.label1.TabIndex = 16;
             this.label1.Text = "Task List";
             // 
@@ -56,6 +56,7 @@
             this.btnRemoveTask.TabIndex = 15;
             this.btnRemoveTask.Text = "Remove Task";
             this.btnRemoveTask.UseVisualStyleBackColor = true;
+            this.btnRemoveTask.Click += new System.EventHandler(this.btnRemoveTask_Click);
             // 
             // lstTasks
             // 
@@ -64,6 +65,7 @@
             this.lstTasks.Name = "lstTasks";
             this.lstTasks.Size = new System.Drawing.Size(188, 95);
             this.lstTasks.TabIndex = 14;
+            this.lstTasks.SelectedIndexChanged += new System.EventHandler(this.lstTasks_SelectedIndexChanged);
             // 
             // btnPrintAll
             // 
@@ -73,6 +75,7 @@
             this.btnPrintAll.TabIndex = 13;
             this.btnPrintAll.Text = "Print All Tasks";
             this.btnPrintAll.UseVisualStyleBackColor = true;
+            this.btnPrintAll.Click += new System.EventHandler(this.btnPrintAll_Click);
             // 
             // lblTaskDetails
             // 
@@ -90,6 +93,7 @@
             this.btnAddTask.TabIndex = 11;
             this.btnAddTask.Text = "Add Task";
             this.btnAddTask.UseVisualStyleBackColor = true;
+            this.btnAddTask.Click += new System.EventHandler(this.btnAddTask_Click);
             // 
             // txtTask
             // 
@@ -121,6 +125,7 @@
             this.Controls.Add(this.dtpTaskDate);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
