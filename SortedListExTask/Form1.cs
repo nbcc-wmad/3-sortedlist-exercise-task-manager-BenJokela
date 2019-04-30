@@ -16,5 +16,30 @@ namespace SortedListExTask
         {
             InitializeComponent();
         }
+        SortedList<DateTime, string> taskList = new SortedList<DateTime, string>();
+
+
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAddTask_Click(object sender, EventArgs e)
+        {
+            if(txtTask.Text == string.Empty)
+            {
+                MessageBox.Show("You must enter a task.", "Invalid Data", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                DateTime taskDate = dtpTaskDate.Value;
+                string taskName = txtTask.Text.Trim();
+
+                taskList.Add(taskDate, taskName);
+                lstTasks.Items.Add(taskDate.ToShortDateString() + " " + taskName);
+
+            }
+        }
     }
 }
